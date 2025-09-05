@@ -1,138 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Old School Powerlifting – Online Koçluk</title>
-  <meta name="description" content="Old school powerlifting koçluğu. TR/EN. Aylık 5.000 TL, 7/24 destek. Türkiye destekli." />
-  <style>
-    :root{--bg:#0b0b0c;--card:#141417;--muted:#a0a0a8;--text:#f5f5f7;--accent:#b91c1c;--line:#232327}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--text);background:radial-gradient(1200px 700px at 120% -20%,#1a1a1f10,transparent),var(--bg)}
-    .container{max-width:980px;margin:auto;padding:20px}
-    header{position:sticky;top:0;backdrop-filter:saturate(1.2) blur(6px);background:#0b0b0ccc;border-bottom:1px solid var(--line);z-index:10}
-    .nav{display:flex;align-items:center;justify-content:space-between}
-    .logo{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:.5px}
-    .badge{background:#b91c1c22;border:1px solid #b91c1c55;color:#ffdddd;padding:2px 8px;border-radius:999px;font-size:12px}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:12px 16px;border:none;border-radius:12px;font-weight:800;cursor:pointer;text-decoration:none}
-    .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--text)}
-    .hero{display:grid;gap:14px;padding:40px 0}
-    .hero h1{font-size:38px;margin:0}
-    .muted{color:var(--muted)}
-    .grid{display:grid;gap:12px}
-    .cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
-    footer{border-top:1px solid var(--line);margin-top:30px;padding:20px 0;color:#9a9aa0;font-size:13px}
-    .row{display:flex;gap:10px;flex-wrap:wrap}
-    .pill{font-size:12px;border:1px solid var(--line);padding:6px 10px;border-radius:999px;color:#cfcfd4}
-    .lang{display:flex;gap:8px}
-    .price{font-size:28px;font-weight:900}
-    .small{font-size:12px}
-    a{text-decoration:none;color:#e5e5e7}
-    .center{text-align:center}
-  </style>
+  <meta name="description" content="Türkiye destekli online powerlifting koçluğu. Aylık 5.000 TL, squat-bench-deadlift odaklı antrenman ve 7/24 WhatsApp destek." />
+  <meta name="keywords" content="powerlifting, online koçluk, Türkiye powerlifting, bench press programı, squat koçu, deadlift geliştirme, fitness koçu, online antrenman" />
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="logo">
-        <span>🏋️‍♂️</span>
-        <span>Old School Powerlifting</span>
-        <span class="badge" data-i18n="badge.tr">Türkiye destekli</span>
-      </div>
-      <div class="lang">
-        <button id="lang-tr" class="btn ghost" aria-label="Türkçe">TR</button>
-        <button id="lang-en" class="btn ghost" aria-label="English">EN</button>
-        <a href="#apply" class="btn" data-i18n="cta.apply">Kayıt Ol</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <span class="pill">NO PAIN • NO GAIN</span>
-      <h1 data-i18n="hero.title">Basit ve etkili powerlifting koçluğu</h1>
-      <p class="muted" data-i18n="hero.desc">Aylık tek paket: 5.000 TL • 📲 7/24 destek • Türkiye IBAN ile ödeme</p>
-      <div class="row">
-        <a class="btn" href="#apply" data-i18n="cta.apply">Kayıt Ol</a>
-        <a class="btn ghost" href="https://wa.me/905359342070" target="_blank" rel="noopener" data-i18n="cta.whatsapp">WhatsApp yaz</a>
-      </div>
-    </section>
-
-    <section class="grid cols-3">
-      <div class="card">
-        <strong data-i18n="f1.t">Tek paket</strong>
-        <p class="muted" data-i18n="f1.d">Aylık 5.000 TL. Program + haftalık kontrol.</p>
-      </div>
-      <div class="card">
-        <strong data-i18n="f2.t">24/7 destek</strong>
-        <p class="muted" data-i18n="f2.d">WhatsApp üzerinden hızlı dönüş.</p>
-      </div>
-      <div class="card">
-        <strong data-i18n="f3.t">TR uyumlu</strong>
-        <p class="muted" data-i18n="f3.d">Ödeme: Türkiye IBAN / havale-EFT.</p>
-      </div>
-    </section>
-
-    <section class="card center" id="apply" style="margin-top:16px">
-      <h2 style="margin:0 0 6px 0" data-i18n="apply.t">Kayıt</h2>
-      <p class="muted" data-i18n="apply.d">Direkt WhatsApp’tan yaz; hedefini konuşalım.</p>
-      <p class="small muted" data-i18n="apply.note">Ödeme: TR IBAN. Fatura & sözleşme e‑posta ile gönderilir.</p>
-      <p class="muted" style="margin:10px 0" data-i18n="support">📲 7/24 Destek</p>
-      <a class="btn" href="https://wa.me/905359342070" target="_blank" rel="noopener" data-i18n="cta.whatsapp">WhatsApp yaz</a>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container row" style="justify-content:space-between">
-      <div>© <span id="y"></span> Old School Powerlifting</div>
-      <div class="small">TR 🇹🇷 • <a href="#" data-i18n="policy">Gizlilik ve Koşullar</a></div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    const dict = {
-      tr: {
-        'badge.tr': 'Türkiye destekli',
-        'cta.apply': 'Kayıt Ol',
-        'cta.whatsapp': 'WhatsApp yaz',
-        'hero.title': 'Basit ve etkili powerlifting koçluğu',
-        'hero.desc': 'Aylık tek paket: 5.000 TL • 📲 7/24 destek • Türkiye IBAN ile ödeme',
-        'f1.t':'Tek paket','f1.d':'Aylık 5.000 TL. Program + haftalık kontrol.',
-        'f2.t':'24/7 destek','f2.d':'WhatsApp üzerinden hızlı dönüş.',
-        'f3.t':'TR uyumlu','f3.d':'Ödeme: Türkiye IBAN / havale-EFT.',
-        'apply.t':'Kayıt','apply.d':'Direkt WhatsApp’tan yaz; hedefini konuşalım.','apply.note':'Ödeme: TR IBAN. Fatura & sözleşme e‑posta ile gönderilir.',
-        'policy':'Gizlilik ve Koşullar','support':'📲 7/24 Destek'
-      },
-      en: {
-        'badge.tr': 'Turkey‑based',
-        'cta.apply': 'Sign Up',
-        'cta.whatsapp': 'Message on WhatsApp',
-        'hero.title': 'Simple & effective powerlifting coaching',
-        'hero.desc': 'Single plan: 5,000 TL • 📲 24/7 support • Payment via Turkish IBAN',
-        'f1.t':'Single plan','f1.d':'5,000 TL/month. Program + weekly check‑in.',
-        'f2.t':'24/7 support','f2.d':'Fast responses via WhatsApp.',
-        'f3.t':'TR ready','f3.d':'Payment: Turkish IBAN / bank transfer.',
-        'apply.t':'Registration','apply.d':'Message me on WhatsApp; let’s discuss your goal.','apply.note':'Payment: TR IBAN. Invoice & agreement by email.',
-        'policy':'Privacy & Terms','support':'📲 24/7 Support'
-      }
-    };
-
-    function setLang(code){
-      const map = dict[code] || dict.tr;
-      document.documentElement.lang = code;
-      document.querySelectorAll('[data-i18n]').forEach(el=>{
-        const key = el.getAttribute('data-i18n');
-        if(map[key]) el.textContent = map[key];
-      });
-      localStorage.setItem('lang', code);
-    }
-
-    document.getElementById('lang-tr').addEventListener('click', ()=>setLang('tr'));
-    document.getElementById('lang-en').addEventListener('click', ()=>setLang('en'));
-    setLang(localStorage.getItem('lang')||'tr');
-  </script>
+  <h1>Old School Powerlifting</h1>
+  <p>Bu site güncellenmiş meta etiketleri ile yayındadır.</p>
 </body>
 </html>
