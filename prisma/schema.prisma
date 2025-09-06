@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(cuid())
+  name          String?
+  email         String?  @unique
+  phone         String?  @unique
+  passwordHash  String?
+  createdAt     DateTime @default(now())
+  subscriptions Subscription[]
+  feedbacks     Feedback[]
+  quizzes       QuizSession[]
+}
+
+model Subscription {
+  id        String   @id @default(cuid())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  plan      String
+  status    String   // ACTIVE | CANCELED | EXPIRED
+  startAt   DateTime @default(now())
+  endAt     DateTime?
+}
+
+model Payment {
+  id           String   @id @default(cuid())
+  user         User?    @relation(fields: [userId], references: [id])
+  userId       String?
+  amountTl     Int
+  provider     String
+  providerTxId String?
+  status       String   // PAID | FAILED | PENDING
+  createdAt    DateTime @default(now())
+}
+
+model Feedback {
+  id        String   @id @default(cuid())
+  user      User?    @relation(fields: [userId], references: [id])
+  userId    String?
+  type      String   // öneri | şikayet | hata | ödeme
+  subject   String
+  message   String
+  fileUrl   String?
+  status    String   @default("open")
+  createdAt DateTime @default(now())
+}
+
+model QuizSession {
+  id         String   @id @default(cuid())
+  user       User?    @relation(fields: [userId], references: [id])
+  userId     String?
+  answers    Json
+  profileKey String?
+  createdAt  DateTime @default(now())
+}
